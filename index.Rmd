@@ -8,10 +8,9 @@ output:
 
 # This is Jeff's awesome website
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
-I use [google](https://www.google.com/) all the time to do data science. 
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif) I use [google](https://www.google.com/) all the time to do data science.
 
-This is my cat Georgie. 
+This is my cat Georgie.
 
 ![](images/georgie.jpeg)
 
@@ -20,6 +19,6 @@ library(tidyverse)
 
 ```
 
-Here's a direct link to the about page:
-[about](about.html).
+Here's a direct link to the about page: [about](about.html).
 
+Here's a direct link to the plotly page: [plotly] ()
