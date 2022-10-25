@@ -1,20 +1,22 @@
 ---
-title: "Plotly"
+title: "AirBNB dashboard"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
 
-
-```{r}
+```{r setup, include=FALSE}
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
-
+library(flexdashboard)
 ```
 
-```{r}
+
+
+```{r include = FALSE}
+
 data("nyc_airbnb")
 
 nyc_airbnb =
@@ -27,9 +29,12 @@ nyc_airbnb =
          room_type == "Entire home/apt",
          price %in% 100:500) %>% 
     drop_na(rating)
-  
 ```
-Scatterplot!
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 nyc_airbnb %>% 
@@ -42,7 +47,12 @@ nyc_airbnb %>%
     alpha = .5, text = ~text_label
   )
 ```
-Boxplots!
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
 
 ```{r}
 nyc_airbnb %>% 
@@ -52,7 +62,8 @@ nyc_airbnb %>%
     type = "box", colors = "viridis"
   )
 ```
-Bar plot!
+
+### Chart C
 
 ```{r}
 nyc_airbnb %>% 
@@ -61,18 +72,5 @@ nyc_airbnb %>%
   plot_ly(
     x = ~neighbourhood, y = ~n,
     type = "bar")
-
 ```
-## ggplotly
 
-```{r}
-ggp_scatterplot = 
-  nyc_airbnb %>% 
-  ggplot(aes(x = lat, y = long, color = price)) +
-  geom_point()
-
-ggplotly(ggp_scatterplot)
-
-```
-## Create a dashboard
-Not here though...new rmd file
