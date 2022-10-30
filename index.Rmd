@@ -11,10 +11,9 @@ output:
 
 
 <center>
-<img src="images/IMG7327.jpg" style="width:25%">
+<img src="images/IMG7327.jpg" style="width:15%">
 </center>
 
-```
 
 [Click here to learn more about me](about.html).
 
