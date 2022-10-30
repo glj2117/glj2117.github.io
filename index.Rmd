@@ -9,7 +9,6 @@ output:
 # This is my personal webstie
 
 
-![](images/IMG_7327.jpg)
 
 <center>
 <img src="images/IMG7327.jpg" style="width:25%">
