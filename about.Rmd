@@ -41,7 +41,7 @@ NSF Research Experience for Undergraduates (REU) Program
 •	Conducted field and lab work - quadrat measurements, pH, salinity, and water holding capacity tests
 
 
-## ADDITIONAL SKILLS & INTERESTS
+# ADDITIONAL SKILLS & INTERESTS
 •	Near-native Spanish Fluency	
 •	Experience with R Studio, ArcGIS, Excel, and Hootsuite	
 •	CPR/AED and First Aid Certified
