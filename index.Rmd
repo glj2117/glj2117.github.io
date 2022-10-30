@@ -9,10 +9,10 @@ output:
 # This is my personal webstie
 
 
-
-<center>
+![](images/IMG_7327.jpg)
 <img src="images/IMG7327.jpg" style="width:15%">
 </center>
+
 
 
 [Click here to learn more about me](about.html).
@@ -20,4 +20,4 @@ output:
 
 [Click here for my github page](https://github.com/glj2117) 
 
- ```
+
