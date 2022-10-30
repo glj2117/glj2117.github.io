@@ -1,13 +1,58 @@
 ---
-title: "My awesome website"
+title: "About me"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Jeff's awesome website
-This awesome website is made in markdown and other stuff. 
+
+# EDUCATION
+
+Columbia University Mailman School of Public Health	 2021-Present					
+ 	Master of Science, Environmental Health Data Science			             
+
+Barnard College of Columbia University			   Class of 2020
+Bachelor of Arts, Environmental Science and Spanish 
+
+Universidad de Sevilla, Seville, Spain				    Spring 2019		
+
+# EXPERIENCE
+
+COLUMBIA UNIVERSITY MAILMAN SCHOOL OF PUBLIC HEALTH,  2020-Present
+Senior Laboratory Technician, Baccarelli Laboratory of Precision Environmental Health
+•	Isolate DNA, RNA, and Extracellular Vesicles from large quantities of samples from a variety of human biofluids and tissues 
+•	Process samples for Postdoctoral fellows and external collaborators at other research institutions
+•	Revise laboratory protocols, and perform various other technical and administrative tasks for the lab
+•	Purchase and reconcile purchases for lab supplies, communicating with vendors and financial team 
+
+LAMONT DOHERTY EARTH OBSERVATORY OF COLUMBIA UNIVERSITY, Palisades, NY	2019-2020
+Senior Thesis Research, Griffin Lab
+•	Conducted independent laboratory work and data analysis for senior thesis on the effect of leaf age on day respiration rates in various plant species
+•	Grew plants in growth chambers and conducted gas exchange measurements using a LI-COR portable photosynthesis system
+
+CITY OF BOSTON, ENVIRONMENT DEPARTMENT, Boston, MA	 Summer 2019
+Greenovate Communications Intern
+•	Provided communications support with a focus on outreach and community engagement for climate change.
+•	Developed content for social media and for newsletters circulated to over 6,000 constituents
+•	Transitioned website to Drupal platform and updated content to include environmental equity initiatives
+
+SEVILLETA NATIONAL WILDLIFE REFUGE UNM FIELD STATION, New Mexico	Summer 2018
+NSF Research Experience for Undergraduates (REU) Program	
+•	Designed and completed project analyzing plant and soil dynamics near roadsides
+•	Conducted field and lab work - quadrat measurements, pH, salinity, and water holding capacity tests
+
+
+## ADDITIONAL SKILLS & INTERESTS
+•	Near-native Spanish Fluency	
+•	Experience with R Studio, ArcGIS, Excel, and Hootsuite	
+•	CPR/AED and First Aid Certified
+
+
+
+
+
+
 
 
 
