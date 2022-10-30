@@ -9,11 +9,11 @@ output:
 # This is my personal webstie
 
 
-```{r}
-library(tidyverse)
+![](images/IMG_7327.jpg)
 
 ```
 
-Here's a direct link to the about page: [about](about.html).
+[Click here to learn more about me](about.html).
+[Click here for my github page](https://github.com/glj2117) 
 
  
