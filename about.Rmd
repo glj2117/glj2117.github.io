@@ -5,8 +5,6 @@ output:
     toc: true
     toc_float: true
 ---
-
-
 # EDUCATION
 
 Columbia University Mailman School of Public Health	 2021-Present					
