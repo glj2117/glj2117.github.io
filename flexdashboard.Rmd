@@ -46,7 +46,6 @@ ny_noaa_sub = ny_noaa %>%
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-<<<<<<< HEAD
 ### Minimum Temperature (ºC) in Central Park by Month (2005-2010)
 
 ```{r chunk2}
@@ -58,24 +57,7 @@ central_park_noaa %>%
   )
 ```
 ### Maximum Temperature (ºC) in Central Park by Month (2005-2010)
-=======
 
-```
-### Minimum Temperature (ºC) in Central Park by Month (2005-2010)
->>>>>>> 7835f38ebed3ebf90e1225cdfb77627ae6e2f113
-
-```{r chunk2}
-central_park_noaa %>% 
-  group_by(month) %>% 
-  plot_ly(
-    y = ~tmax, color = ~month,
-    type = "box", colors = "viridis"
-  )
-```
-### Maximum Temperature (ºC) in Central Park by Month (2005-2010)
-
-<<<<<<< HEAD
-=======
 ```{r chunk3}
 central_park_noaa %>% 
   group_by(month) %>% 
@@ -85,7 +67,6 @@ central_park_noaa %>%
   )
 ```
 
->>>>>>> 7835f38ebed3ebf90e1225cdfb77627ae6e2f113
 Column {data-width=500}
 -----------------------------------------------------------------------
 
