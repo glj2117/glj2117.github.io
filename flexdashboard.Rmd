@@ -16,19 +16,30 @@ library(flexdashboard)
 
 
 ```{r include = FALSE}
+data("ny_noaa")
 
-data("nyc_airbnb")
+central_park_noaa = ny_noaa %>% 
+  separate(col = 'date', into = c('year', 'month', 'day'), sep = '-') %>%
+  filter(year %in% 2005:2010,
+    id == "USW00094728") %>%
+  mutate(
+        snow = (snow/10),
+         snwd = (snwd/10),
+         tmax = (as.numeric(tmax))/10,
+         tmin = (as.numeric(tmin))/10
+  )
 
-nyc_airbnb =
-  nyc_airbnb %>% 
-  mutate(rating = review_scores_location / 2) %>% 
-  select(
-    borough = neighbourhood_group, neighbourhood, price, room_type, 
-    lat, long, rating) %>% 
-  filter(borough == "Manhattan",
-         room_type == "Entire home/apt",
-         price %in% 100:500) %>% 
-    drop_na(rating)
+ny_noaa_sub = ny_noaa %>% 
+  separate(col = 'date', into = c('year', 'month', 'day'), sep = '-') %>%
+  filter(year %in% 2005:2010) %>% 
+  mutate(
+        snow = (snow/10),
+         snwd = (snwd/10),
+         tmax = (as.numeric(tmax))/10,
+         tmin = (as.numeric(tmin))/10
+  )
+
+
 ```
 
 Column {data-width=650}
@@ -37,15 +48,15 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-nyc_airbnb %>% 
-  mutate(
-    text_label = str_c("Price: ", price)
-  ) %>% 
+
+central_park_noaa %>% 
+  group_by(month, year) %>% 
+  summarize(avg_prcp = mean(prcp)) %>% 
   plot_ly(
-    x = ~lat, y = ~long, color = ~price,
-    type = "scatter", mode = "markers",
-    alpha = .5, text = ~text_label
+    x = ~month, y = ~avg_prcp, color = ~year,
+    type = "bar", colors = "viridis"
   )
+
 ```
 
 
@@ -55,10 +66,10 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-nyc_airbnb %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
+central_park_noaa %>% 
+  group_by(month) %>% 
   plot_ly(
-    y = ~price, color = ~neighbourhood,
+    y = ~tmin, color = ~month,
     type = "box", colors = "viridis"
   )
 ```
@@ -66,11 +77,45 @@ nyc_airbnb %>%
 ### Chart C
 
 ```{r}
-nyc_airbnb %>% 
-  count(neighbourhood) %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
+central_park_noaa %>% 
+  group_by(month) %>% 
   plot_ly(
-    x = ~neighbourhood, y = ~n,
-    type = "bar")
+    y = ~tmax, color = ~month,
+    type = "box", colors = "viridis"
+  )
+```
+### Chart D
+
+```{r}
+ny_noaa_sub %>% 
+  filter(year == 2010) %>% 
+  group_by(month) %>% 
+  plot_ly(
+    y = ~prcp, x = ~month,
+    type = "scatter", mode = "markers", fill = "tozeroy",
+    alpha = .5
+  )
+
+
+
+ny_noaa_sub %>%
+  filter(year == 2005) %>% 
+  plot_ly(
+    x = ~month,
+    y = ~prcp,
+    split = ~month,
+    type = 'violin',
+    box = list(
+      visible = T
+    ),
+    meanline = list(
+      visible = T
+    )
+  ) 
+
+ny_noaa_sub %>% 
+  plot_ly( x = ~month, y = ~prcp, text = ~prcp, type = 'scatter', mode = 'markers',
+        marker = list(size = ~prcp, opacity = 0.5))
+
 ```
 
